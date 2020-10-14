@@ -1,0 +1,27 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14 oct. 2020, 13:17:30
+    Author     : jonathan
+*/
+
+*{
+    font-family: gill-sand;
+}
+form{
+    padding: 1em;
+    background-color: #997B08;  
+    border-radius: 0.4em;
+}
+
+form label{
+	font-weight:bold;
+	display:inline-block;
+}
+
+input:hover{
+    background-color: #E6BA17;
+}
