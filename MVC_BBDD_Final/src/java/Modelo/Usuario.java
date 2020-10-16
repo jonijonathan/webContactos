@@ -27,7 +27,7 @@ public class Usuario {
         this.email = email;
         this.nombre = nombre;
         this.clave = clave;
-        this.foto = "";
+        this.foto = "../default.img";
         this.rSeria = false;
         this.deportivo = 0;
         this.artistico = 0;

@@ -110,16 +110,28 @@ footer{
 .margenAbajo{
     margin-bottom: 1em;
 }
+.margen{
+    margin: 0.2em;
+}
 .centrado{
     align-content: center;
     align-items: center;
     text-align: center;
 }
-ul {
-    list-style: none;
+
+
+.error {
+  width : 100%;
+  padding: 0;
+
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+
+  box-sizing: border-box;
 }
-li {
-    display: inline;
-    list-style: none;
-    padding: 0.3em;
+
+.error.active {
+  padding: 0.3em;
 }

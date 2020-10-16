@@ -16,12 +16,13 @@
     <body>
         <%
             Usuario p = (Usuario) session.getAttribute("userActual");
-            String ses = session.getId();  
+            String ses = session.getId();
         %>
         <header class="row">
 
         </header>
         <main>
+            <!--Parte del usuario -->
             <section  class ="row">
                 <img class="col-l-2" src="<%= p.getFoto()%>" width="" >
                 <div class="col-l-6">
@@ -31,23 +32,24 @@
                     </div>
                     <div class="row">
                         <nav>
-                            <ul class="centrado" display: inline">
-                                <li class="col-l-2" >Editar perfil</li>
-                                <li class="col-l-2">Enviar mensaje</li>
-                                <li class="col-l-2">Ver mensajes</li>
-                                <li class="col-l-2">Cerrar Session</li>
-                            </ul>
+                            <form name ="nav" action="../controlador.jsp" method="POST">
+                                <div class="row">
+                                    <input class="col-l-5" type="submit" name="EditarMiPerfil" value="Editar mi perfil">
+                                    <input class="col-l-5" type="submit" name="envMensjaes" value="Enviar mensaje">
+                                </div>
+                                <div class="row">
+                                    <input class="col-l-5" type="submit" name="verMensajes" value="Ver mensajes">
+                                    <input class="col-l-5" type="submit" name="cs" value="Cerrar Session">
+                                </div>
+                            </form>
                         </nav>
                     </div>
                 </div>
-                <div class="col-l-2">
-
-                </div>
+                <div class="col-l-2"></div>
             </section>
-
+        <!--Parte de cargar a los demas usuarios -->
+        <section></section>
         </main>       
-
-
         <footer class="row">
             <div class="col-l-10">
                 Proyecto creado por Jonathan Zapico Garrido, en el ciclo de DAW
