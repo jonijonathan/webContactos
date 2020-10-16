@@ -102,7 +102,7 @@ input{
 input:hover{
     background-color: #39bcdb;
 }
-footer{
+footer, header{
     border-radius: 0.4em;
     background-color: #db4f82;
 }

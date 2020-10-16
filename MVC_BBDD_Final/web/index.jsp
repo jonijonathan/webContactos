@@ -15,7 +15,9 @@
     </head>
     <body onload="validarLoggin()">
         <header class="row">
-
+            <div class="col-l-2"></div>
+            <img class="col-l-6" src ="img/logoMediaNaranja.png" alt="logo"/>
+            <div class="col-l-2"></div>
         </header>
         <main class ="row">
             <div class="col-l-2"></div>
