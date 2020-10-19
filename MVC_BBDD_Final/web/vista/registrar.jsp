@@ -25,26 +25,26 @@
                 <form novalidate class="margenAbajo" id ="formularioRegistro" action="../controlador.jsp" method="POST" name="formRegistro">
                     <div class="row">                
                         <label class="col-l-5">Email</label>
-                        <input  class="col-l-5" type ="email" value="" id ="email"/>
+                        <input  class="col-l-5" type ="email" value="" name ="email" id ="email" required/>
                         <span id ="arialErrorEmail" class="error" aria-live="polite"></span>
                     </div>
                     <div class="row">
                         <label class="col-l-5">Nombre</label>
-                        <input  class="col-l-5" type ="text" value="" id ="nombre" minlength="4"/>
+                        <input  class="col-l-5" type ="text" value="" name ="nombre" id ="nombre" minlength="4" required/>
                         <span id ="arialErrorNombre" class="error" aria-live="polite"></span>
                     </div>
                     <div class="row">
                         <label class="col-l-5">Contraseña</label>
-                        <input  class="col-l-5" type ="password" value="" id ="clave" minlength="3"/>
+                        <input  class="col-l-5" type ="password" value="" name ="clave" id ="clave" minlength="3" required/>
                         <span id ="arialErrorClave" class="error" aria-live="polite"></span>
                     </div>
                     <div class="row">
-                        <input class="col-l-10" type ="submit" value="Enviar" id ="enviar"/>
+                        <input class="col-l-10" name ="datosCompletos" type ="submit" value="Enviar" id ="enviar"/>
                     </div>
                 </form>
                 <form action="../index.jsp" method="POST">
                     <div class="row">
-                        <input class="col-l-10" type ="submit" value="Volver" name ="Volver"/>
+                        <input class="col-l-10"  type ="submit" value="Volver" name ="Volver"/>
                     </div>
                 </form>
             </div>

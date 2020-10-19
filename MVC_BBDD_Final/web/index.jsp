@@ -25,12 +25,12 @@
                 <form novalidate="" id="formularioLogging" class="margenAbajo" action="controlador.jsp" method="POST">
                     <div class="row">
                         <label class="col-l-5">Email</label>
-                        <input  class="col-l-5" id ="email" type ="email" value="" name ="user"/>
+                        <input  class="col-l-5" id ="email" type ="email" value="" name ="user" required/>
                         <span id ="arialErrorEmail" class="error" aria-live="polite"></span>
                     </div> 
                     <div class="row">
                         <label class="col-l-5">Contraseña:</label>
-                        <input  class="col-l-5" id="clave" type ="password" value="" name ="contra"/>
+                        <input  class="col-l-5" id="clave" type ="password" value="" name ="contra" required/>
                         <span id ="arialErrorClave" class="error" aria-live="polite"></span>
                     </div>   
                     <div class="row">

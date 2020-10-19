@@ -82,6 +82,33 @@ public class ConexionEstatica {
         return p;
     }
 
+   public static boolean addUsuario(Usuario p){
+        nueva();
+        boolean conseguido = false;
+        String Sentencia = "INSERT INTO " + Constantes.tablaUsuarios + " VALUES "
+                + "('" + p.getEmail() + "'," + "'" + p.getNombre() + "','" + p.getClave() + "','"
+                + p.getFoto() + "'," + p.isrSeria() + ", " + p.getDeportivo() 
+                + "," + p.getArtistico() + "," + p.getPolitico() + ", " + p.isTieneHijos() + ","
+                + p.isQuiereHijos() + ",'" + p.getSexo() + "','"+ p.getInteresadoEn() +"'," + p.ispActivado() + ");";
+        System.out.println(Sentencia);
+        
+        //--- Meter las asignaturas
+        try {
+            ConexionEstatica.Sentencia_SQL.executeUpdate(Sentencia);
+            Sentencia = "INSERT INTO " + Constantes.tablaRolUser +
+                    " VALUES ('" + p.getEmail() + "', 2 )";
+            ConexionEstatica.Sentencia_SQL.executeUpdate(Sentencia);
+            System.out.println(Sentencia);
+            conseguido = true;
+            cerrarBD();
+        } catch (Exception e) {
+            System.out.println(e);
+        };
+
+        return conseguido;
+   }
+   
+   
     public static LinkedList dimeRoles(String email){
     nueva();
     LinkedList roles = new LinkedList<String>();

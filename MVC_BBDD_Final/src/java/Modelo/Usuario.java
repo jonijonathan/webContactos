@@ -18,6 +18,7 @@ public class Usuario {
     private boolean quiereHijos;
     private String sexo;
     private String interesadoEn;
+    private boolean pActivado;
     
 
     public Usuario() {
@@ -27,7 +28,7 @@ public class Usuario {
         this.email = email;
         this.nombre = nombre;
         this.clave = clave;
-        this.foto = "../default.img";
+        this.foto = "../img/default.img";
         this.rSeria = false;
         this.deportivo = 0;
         this.artistico = 0;
@@ -36,6 +37,7 @@ public class Usuario {
         this.quiereHijos = false;
         this.sexo = "hombre";
         this.interesadoEn = "ambos";
+        this.pActivado = false;
         
     }
 
@@ -52,6 +54,7 @@ public class Usuario {
         this.quiereHijos = quiereHijos;
         this.sexo = sexo;
         this.interesadoEn = interesadoEn;
+        this.pActivado = false;
     }
 
     public Usuario(String email) {
@@ -67,10 +70,16 @@ public class Usuario {
         this.quiereHijos = false;
         this.sexo = "";
         this.interesadoEn = "ambos";
+        this.pActivado = false;
     }
-    
-    
-    
+
+    public boolean ispActivado() {
+        return pActivado;
+    }
+
+    public void setpActivado(boolean pActivado) {
+        this.pActivado = pActivado;
+    }
 
     public String getEmail() {
         return email;
@@ -168,7 +177,5 @@ public class Usuario {
         this.interesadoEn = interesadoEn;
     }
 
-    
-    
 
 }

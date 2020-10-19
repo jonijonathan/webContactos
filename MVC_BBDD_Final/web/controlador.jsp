@@ -48,18 +48,6 @@
                 }
             }
 
-            //--------------
-            //registro de Usuario
-            if (request.getParameter("datosCompletos") != null) {
-                
-
-                //añadir a la persona a la BD
-                /*
-                if(ConexionEstatica.addPersona(p)){
-                    response.sendRedirect("vista/registroOK.jsp");
-                }
-                */
-            }
 
             //--------
             //Vengo de acierto
@@ -89,8 +77,7 @@
             
 
             
-            //confirmar Olvidado
-            
+            //confirmar Olvidado       
             if (request.getParameter("confirmaOlvidado") != null) {
                 //enviar correo       
                 String para = request.getParameter("emailOlv");               
@@ -110,6 +97,19 @@
                     response.sendRedirect("vista/nuevaContra.jsp");
                 }
 
+            }
+            
+            //registrar
+            if(request.getParameter("datosCompletos") != null){
+                String nombre = request.getParameter("nombre") + "";
+                String clave = request.getParameter("clave") + "";
+                String email = request.getParameter("email") + "";
+                Usuario u = new Usuario (email,nombre,clave);
+                if(ConexionEstatica.addUsuario(u)){
+                    response.sendRedirect("vista/registroOK.jsp");
+                }else{
+                    response.sendRedirect("vista/fallo.jsp");
+                }
             }
             
             /*
