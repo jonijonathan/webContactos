@@ -41,14 +41,8 @@
                     </div>
                     <!--reCathca de google-->
                     <div class="row">
-                        <div class="g-recaptcha , col-l-10 " data-sitekey="6LeT8dgZAAAAACL0G6LHUkLwe6iCLcftssSVR5yB"></div>
-                        <span>
-                            <%
-                                Object errorMessage = session.getAttribute("errorMessage");
-                                if (errorMessage != null)
-                                    out.print(errorMessage.toString());
-                            %>
-                        </span>
+                        <div id="rCatcha" class="g-recaptcha , col-l-10 " data-sitekey="6LeT8dgZAAAAACL0G6LHUkLwe6iCLcftssSVR5yB"></div>
+                        <span id ="arialErrorCatcha" class="error" aria-live="polite"></span>
                     </div>
                     <div class="row">
                         <input class="col-l-10" name ="datosCompletos" type ="submit" value="Enviar" id ="enviar"/>

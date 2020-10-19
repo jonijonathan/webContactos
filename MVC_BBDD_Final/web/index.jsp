@@ -12,8 +12,9 @@
         <title>Loggig</title>
         <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
         <script src="js/jsControlador.js" type="text/javascript"></script>
+        <!--<script src="js/validacionCatcha.js" type="text/javascript"></script>-->
     </head>
-    <body onload="validarLoggin()">
+    <body onload="validarLoggin(), captcha()">
         <header class="row">
             <div class="col-l-2"></div>
             <img class="col-l-6" src ="img/logoMediaNaranja.png" alt="logo"/>
@@ -22,7 +23,7 @@
         <main class ="row">
             <div class="col-l-2"></div>
             <div class="col-l-6">
-                <form novalidate="" id="formularioLogging" class="margenAbajo" action="controlador.jsp" method="POST">
+                <form novalidate id="formularioLogging" class="margenAbajo" action="controlador.jsp" method="POST">
                     <div class="row">
                         <label class="col-l-5">Email</label>
                         <input  class="col-l-5" id ="email" type ="email" value="" name ="user" required/>
@@ -32,9 +33,15 @@
                         <label class="col-l-5">Contraseña:</label>
                         <input  class="col-l-5" id="clave" type ="password" value="" name ="contra" required/>
                         <span id ="arialErrorClave" class="error" aria-live="polite"></span>
-                    </div>   
+                    </div>
                     <div class="row">
-                        <input  class="col-l-10" type ="submit" value="entrar" name ="accionIndex"/>
+                        <canvas class="col-l-4" id="captcha"></canvas>  
+                        <input class="col-l-3" type="text" id="textoCatcha"/>
+                        <span id ="arialErrorCatcha" class="error" aria-live="polite"></span>
+                        <input  class="col-l-3" type="button" id="refresh" value="Otro Catcha" onclick="captcha();" />
+                    </div>
+                    <div class="row">
+                        <input  class="col-l-10" type ="submit"  value="entrar" name ="accionIndex"/>
                     </div>
                 </form>
                 <form class="margenAbajo" action="controlador.jsp">
@@ -56,7 +63,5 @@
                 Proyecto creado por Jonathan Zapico Garrido, en el ciclo de DAW
             </div>
         </footer>
-
-
     </body>
 </html>

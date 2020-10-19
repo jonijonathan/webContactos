@@ -46,6 +46,7 @@
                     //ha pulsado en registrar
                     response.sendRedirect("vista/registrar.jsp");
                 }
+                
             }
 
 
