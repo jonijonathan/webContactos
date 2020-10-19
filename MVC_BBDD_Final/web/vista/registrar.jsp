@@ -12,6 +12,7 @@
         <title>Registro</title>
         <link href="../css/estilos.css" rel="stylesheet" type="text/css"/>
         <script src="../js/jsControlador.js" type="text/javascript"></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
     <body onload="validarRegistro()">
         <header class="row">
@@ -37,6 +38,17 @@
                         <label class="col-l-5">Contraseña</label>
                         <input  class="col-l-5" type ="password" value="" name ="clave" id ="clave" minlength="3" required/>
                         <span id ="arialErrorClave" class="error" aria-live="polite"></span>
+                    </div>
+                    <!--reCathca de google-->
+                    <div class="row">
+                        <div class="g-recaptcha , col-l-10 " data-sitekey="6LeT8dgZAAAAACL0G6LHUkLwe6iCLcftssSVR5yB"></div>
+                        <span>
+                            <%
+                                Object errorMessage = session.getAttribute("errorMessage");
+                                if (errorMessage != null)
+                                    out.print(errorMessage.toString());
+                            %>
+                        </span>
                     </div>
                     <div class="row">
                         <input class="col-l-10" name ="datosCompletos" type ="submit" value="Enviar" id ="enviar"/>
